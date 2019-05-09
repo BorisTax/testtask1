@@ -14,6 +14,7 @@ export default class Main extends React.Component {
     let res={sum:0,error:false};
     //пытаемся преобразовать содержимое input-ов в числа и суммировать
     res.sum=+(first.value)+ +(second.value);
+    res.sum=+res.sum.toFixed(10);
     res.error=isNaN(res.sum);//сохраняем информацию о возможной ошибке при преобразовании
     if(!res.error){ //если все без ошибок, то при необходимости преобразуем данные input-ов в более человеческий вид
         res.first=+first.value;
